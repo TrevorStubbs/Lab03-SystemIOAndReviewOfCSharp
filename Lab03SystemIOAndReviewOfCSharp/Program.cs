@@ -91,7 +91,7 @@ namespace Lab03SystemIOAndReviewOfCSharp
                         }
 
                         if(notformated == false)
-                            GetAverage(methodArray);
+                            Console.WriteLine(GetAverage(methodArray));
 
                     }
                     catch (FormatException)
@@ -109,9 +109,21 @@ namespace Lab03SystemIOAndReviewOfCSharp
 
         }
 
-        static int GetAverage(int[] inputArray)
+        public static decimal GetAverage(int[] inputArray)
         {
-            return 0;
+            int sum = 0;
+
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                sum += inputArray[i];
+            }
+
+            decimal sumAsDecimal = Convert.ToDecimal(sum);
+            decimal lengthAsDecimal = Convert.ToDecimal(inputArray.Length);
+            decimal average = sumAsDecimal/lengthAsDecimal;
+            
+
+            return average;
         }
     }
 }
