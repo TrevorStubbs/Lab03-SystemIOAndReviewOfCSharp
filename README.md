@@ -40,5 +40,6 @@ Then select and open ```Lab03SystemIOAndReviewOfCSharp.sln```
 ---
 
 ### Change Log
+- 1.2: Challenge 2 Caller Method Complete with edge cases
 - 1.1: Challenge 1 Complete
 - 1.0: Initial Repo Setup

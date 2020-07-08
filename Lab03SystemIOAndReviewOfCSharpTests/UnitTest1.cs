@@ -42,5 +42,7 @@ namespace Lab03SystemIOAndReviewOfCSharpTests
             // Assert
             Assert.Equal(product, outputFromMethod);
         }
+        
+        
     }
 }
