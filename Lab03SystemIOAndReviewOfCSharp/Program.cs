@@ -67,38 +67,12 @@ namespace Lab03SystemIOAndReviewOfCSharp
                 Console.Write("Please enter a number between 2-10: ");
                 string userInput = Console.ReadLine();
                 bool success = int.TryParse(userInput, out int arraySize);
-
+                
                 if (success && arraySize > 1 && arraySize < 11)
                 {
-                    try
-                    {
-                        int[] methodArray = new int[arraySize];
-                        for (int i = 0; i < methodArray.Length; i++)
-                        {
-                            Console.Write($"{i + 1} of {methodArray.Length} - Enter a number: ");
-                            int userNumber = Convert.ToInt32(Console.ReadLine());
-                            if (userNumber >= 0)
-                            {
-                                methodArray[i] = userNumber;
-                                notformated = false;
-                            }
-                            else
-                            {
-                                Console.WriteLine("That's not right. Let's start again.");
-                                notformated = true;
-                                break;
-                            }
-                        }
+                    
+                    notformated = IsStillRunning(arraySize);
 
-                        if(notformated == false)
-                            Console.WriteLine(GetAverage(methodArray));
-
-                    }
-                    catch (FormatException)
-                    {
-                        Console.WriteLine("That's not right. Let's start again.");
-                        notformated = true;
-                    }
                 }
                 else
                 {
@@ -107,6 +81,42 @@ namespace Lab03SystemIOAndReviewOfCSharp
                 }
             } while (notformated);
 
+        }
+
+        public static bool IsStillRunning(int arraySize)
+        {
+            bool notformated = false;
+            try
+            {
+                int[] methodArray = new int[arraySize];
+                for (int i = 0; i < methodArray.Length; i++)
+                {
+                    Console.Write($"{i + 1} of {methodArray.Length} - Enter a number: ");
+                    int userNumber = Convert.ToInt32(Console.ReadLine());
+                    if (userNumber >= 0)
+                    {
+                        methodArray[i] = userNumber;
+                        notformated = false;
+                    }
+                    else
+                    {
+                        Console.WriteLine("That's not right. Let's start again.");
+                        notformated = true;
+                        break;
+                    }
+                }
+
+                if (notformated == false)
+                    Console.WriteLine(GetAverage(methodArray));
+
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("That's not right. Let's start again.");
+                notformated = true;
+            }
+
+            return notformated;
         }
 
         public static decimal GetAverage(int[] inputArray)
@@ -125,5 +135,7 @@ namespace Lab03SystemIOAndReviewOfCSharp
 
             return average;
         }
+
+
     }
 }
