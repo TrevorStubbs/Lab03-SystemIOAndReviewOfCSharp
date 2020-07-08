@@ -29,7 +29,7 @@ Then select and open ```Lab03SystemIOAndReviewOfCSharp.sln```
 
 ---
 
-### Visuals *TODO*
+### Visuals
 #### Application Start
 ![Start](images/Lab03Start.png)
 #### Using the Application
@@ -40,4 +40,5 @@ Then select and open ```Lab03SystemIOAndReviewOfCSharp.sln```
 ---
 
 ### Change Log
+- 1.1: Challenge 1 Complete
 - 1.0: Initial Repo Setup
