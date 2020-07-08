@@ -29,7 +29,7 @@ Then select and open ```Lab03SystemIOAndReviewOfCSharp.sln```
 
 ---
 
-### Visuals *TODO*
+### Visuals
 #### Application Start
 ![Start](images/Lab03Start.png)
 #### Using the Application

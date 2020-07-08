@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03SystemIOAndReviewOfCSharp", "Lab03SystemIOAndReviewOfCSharp\Lab03SystemIOAndReviewOfCSharp.csproj", "{8C396872-DD02-464C-B629-7CD200A29558}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03SystemIOAndReviewOfCSharpTests", "Lab03SystemIOAndReviewOfCSharpTests\Lab03SystemIOAndReviewOfCSharpTests.csproj", "{AFA6D97F-1B92-47EB-B22A-2DDA40A8A469}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8C396872-DD02-464C-B629-7CD200A29558}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C396872-DD02-464C-B629-7CD200A29558}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C396872-DD02-464C-B629-7CD200A29558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA6D97F-1B92-47EB-B22A-2DDA40A8A469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA6D97F-1B92-47EB-B22A-2DDA40A8A469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA6D97F-1B92-47EB-B22A-2DDA40A8A469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA6D97F-1B92-47EB-B22A-2DDA40A8A469}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
