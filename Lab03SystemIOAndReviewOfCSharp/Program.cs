@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
 
 namespace Lab03SystemIOAndReviewOfCSharp
 {
@@ -17,7 +19,8 @@ namespace Lab03SystemIOAndReviewOfCSharp
             //Challenge4Caller();
             //Challenge5Caller();
             //Challenge6Caller();
-            Challenge7Caller();
+            //Challenge7Caller();
+            Challenge8Caller();
         }
 
         /// <summary>
@@ -276,7 +279,39 @@ namespace Lab03SystemIOAndReviewOfCSharp
             return result;
         }
 
+        static void Challenge8Caller()
+        {
+            string path = "../../../words.txt";
 
+            string remove = ChoseAWord(path);
 
+            RemoveAWord(path, remove);
+        }
+
+        static string ChoseAWord(string path)
+        {
+            string stringFromFile = ReadAllTextFromFile(path);
+
+            string[] words = stringFromFile.Split(" ");
+
+            return words[1];
+        }
+
+        static void RemoveAWord(string path, string removeThisWord)
+        {
+            string stringFromFile = ReadAllTextFromFile(path);
+
+            string[] words = stringFromFile.Split(" ");
+
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (words[i] == removeThisWord)
+                    words[i] = "";
+            }
+
+            string newString = String.Join(" ", words);
+
+            File.WriteAllText(path, newString);            
+        }
     }
 }
