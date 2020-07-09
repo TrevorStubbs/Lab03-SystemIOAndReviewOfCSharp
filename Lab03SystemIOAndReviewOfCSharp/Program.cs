@@ -16,7 +16,8 @@ namespace Lab03SystemIOAndReviewOfCSharp
             //Challenge3Caller();
             //Challenge4Caller();
             //Challenge5Caller();
-            Challenge6Caller();
+            //Challenge6Caller();
+            Challenge7Caller();
         }
 
         /// <summary>
@@ -242,6 +243,7 @@ namespace Lab03SystemIOAndReviewOfCSharp
 
             AppendWordTofile(path, userString);
         }
+
         static void AppendWordTofile(string path, string inputWord)
         {
             try
@@ -258,6 +260,22 @@ namespace Lab03SystemIOAndReviewOfCSharp
                 Console.WriteLine($"Error Occured: {e.Message}");
             }
         }
+
+        static void Challenge7Caller()
+        {
+            string path = "../../../words.txt";
+
+            string outputFromMethod = ReadAllTextFromFile(path);
+            Console.WriteLine(outputFromMethod);
+        }
+
+        static string ReadAllTextFromFile(string path)
+        {
+            string result = File.ReadAllText(path);
+
+            return result;
+        }
+
 
 
     }
