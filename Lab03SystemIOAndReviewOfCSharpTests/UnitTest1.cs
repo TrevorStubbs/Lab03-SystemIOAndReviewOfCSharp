@@ -126,4 +126,18 @@ namespace Lab03SystemIOAndReviewOfCSharpTests
             Assert.Equal(expectedOutcome, methodCall);
         }
     }
+
+    public class UnitTestsForChallenge9
+    {
+        [Fact]
+        public void DoesItReturnAStringArray()
+        {
+            // Arrange
+            string example = "This is a sentance about important things";
+            //Act
+            string[] outputFromMethod = WordLengthGetter(example);
+            //Assert
+            Assert.Equal(new string[] { "the", "Brown", "Fox" }, outputFromMethod);
+        }
+    }
 }

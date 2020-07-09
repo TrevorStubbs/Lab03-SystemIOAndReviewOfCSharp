@@ -20,7 +20,8 @@ namespace Lab03SystemIOAndReviewOfCSharp
             //Challenge5Caller();
             //Challenge6Caller();
             //Challenge7Caller();
-            Challenge8Caller();
+            //Challenge8Caller();
+            //Challenge9Caller();
         }
 
         /// <summary>
@@ -312,6 +313,20 @@ namespace Lab03SystemIOAndReviewOfCSharp
             string newString = String.Join(" ", words);
 
             File.WriteAllText(path, newString);            
+        }
+
+        static void Challenge9Caller()
+        {
+            Console.WriteLine("Please enter a sentance: ");
+            string userSentance = Console.ReadLine();
+
+            //string[] output = WordLengthGetter(userSentance);
+        }
+
+        public static string[] WordLengthGetter(string sentance)
+        {
+            string[] outputInfo = new string[] { "the", "Brown", "Fox" };            
+            return outputInfo;
         }
     }
 }
