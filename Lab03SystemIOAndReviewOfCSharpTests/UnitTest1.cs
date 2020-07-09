@@ -126,4 +126,27 @@ namespace Lab03SystemIOAndReviewOfCSharpTests
             Assert.Equal(expectedOutcome, methodCall);
         }
     }
+
+    public class UnitTestsForChallenge9
+    {
+        [Fact]
+        public void DoesItReturnTheExampleStringArray()
+        {
+            // Arrange
+            string example = "This is a sentance about important things";
+            //Act
+            string[] outputFromMethod = WordLengthGetter(example);
+            //Assert
+            Assert.Equal(new string[] { "this: 4", "is: 2", "a: 1", "sentance: 8", "about: 5", "important: 9", "things: 6" }, outputFromMethod);
+        }
+
+        [Theory]
+        [InlineData("What a wonderful world", new string[] { "what: 4", "a: 1", "wonderful: 9", "world: 5"})]
+        [InlineData("I don't know what test for symbols mean!", new string[] { "i: 1", "don't: 5", "know: 4", "what: 4", "test: 4", "for: 3", "symbols: 7", "mean!: 5" })]
+        public void RequiredTests(string inputString, string[] expected)
+        {
+            string[] methodCall = WordLengthGetter(inputString);
+            Assert.Equal(expected, methodCall);
+        }
+    }
 }

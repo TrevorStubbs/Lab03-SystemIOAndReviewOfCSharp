@@ -13,14 +13,15 @@ namespace Lab03SystemIOAndReviewOfCSharp
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            //Challenge1Caller();
-            //Challenge2Caller();
-            //Challenge3Caller();
-            //Challenge4Caller();
-            //Challenge5Caller();
-            //Challenge6Caller();
-            //Challenge7Caller();
+            Challenge1Caller();
+            Challenge2Caller();
+            Challenge3Caller();
+            Challenge4Caller();
+            Challenge5Caller();
+            Challenge6Caller();
+            Challenge7Caller();
             Challenge8Caller();
+            Challenge9Caller();
         }
 
         /// <summary>
@@ -312,6 +313,33 @@ namespace Lab03SystemIOAndReviewOfCSharp
             string newString = String.Join(" ", words);
 
             File.WriteAllText(path, newString);            
+        }
+
+        static void Challenge9Caller()
+        {
+            Console.WriteLine("Please enter a sentance: ");
+            string userSentance = Console.ReadLine();
+
+            string[] output = WordLengthGetter(userSentance);
+
+            foreach (string word in output)
+            {
+            Console.Write($"{word} ");
+            }
+        }
+
+        public static string[] WordLengthGetter(string sentance)
+        {
+
+            string[] splitString = sentance.Split(" ");
+
+            for (int i = 0; i < splitString.Length; i++)
+            {
+                int wordLength = splitString[i].Length;
+                splitString[i] = $"{splitString[i].ToLower()}: {wordLength}";
+            }
+          
+            return splitString;
         }
     }
 }
