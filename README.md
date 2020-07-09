@@ -42,7 +42,8 @@ Then select and open ```Lab03SystemIOAndReviewOfCSharp.sln```
 ---
 
 ### Change Log
-- 1.6 Challenge 5 Complete
+- 1.7: Challenge 6 Complete
+- 1.6: Challenge 5 Complete
 - 1.5: Challenge 4 MostDuplicats Method Complete
 - 1.4: Challenge 3 MakeStar method Complete
 - 1.3: Challenge 2 GetAverage Method finished

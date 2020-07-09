@@ -237,14 +237,28 @@ namespace Lab03SystemIOAndReviewOfCSharp
         {
             string path = "../../../words.txt";
 
-            //ReadFile(path);
-            WriteTextToFile(path);
+            Console.WriteLine("Please enter a word: ");
+            string userString = Console.ReadLine();
+
+            AppendWordTofile(path, userString);
+        }
+        static void AppendWordTofile(string path, string inputWord)
+        {
+            try
+            {
+            File.AppendAllText(path, $"{inputWord} ");
+
+            }
+            catch (DirectoryNotFoundException)
+            {
+                Console.WriteLine($"That directory doesn't exist");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Error Occured: {e.Message}");
+            }
         }
 
-        static void WriteTextToFile(string path)
-        {
-            string myInfo = "The bob was a spaceship";
-            File.WriteAllText(path, myInfo);
-        }
+
     }
 }
