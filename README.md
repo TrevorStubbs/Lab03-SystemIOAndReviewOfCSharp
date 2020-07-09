@@ -42,6 +42,7 @@ Then select and open ```Lab03SystemIOAndReviewOfCSharp.sln```
 ---
 
 ### Change Log
+- 1.8: Challenge 7 Complete
 - 1.7: Challenge 6 Complete
 - 1.6: Challenge 5 Complete
 - 1.5: Challenge 4 MostDuplicats Method Complete
