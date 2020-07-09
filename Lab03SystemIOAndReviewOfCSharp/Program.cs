@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace Lab03SystemIOAndReviewOfCSharp
 {
@@ -13,7 +14,9 @@ namespace Lab03SystemIOAndReviewOfCSharp
             //Challenge1Caller();
             //Challenge2Caller();
             //Challenge3Caller();
-            Challenge4Caller();
+            //Challenge4Caller();
+            //Challenge5Caller();
+            Challenge6Caller();
         }
 
         /// <summary>
@@ -177,7 +180,7 @@ namespace Lab03SystemIOAndReviewOfCSharp
             }
         }      
 
-        public static void Challenge4Caller()
+        static void Challenge4Caller()
         {
 
             int[] exampleArray = new int[] { 1, 1, 2, 2, 3, 3, 3, 1, 1, 5, 5, 6, 7, 8, 2, 1, 1 };
@@ -208,6 +211,40 @@ namespace Lab03SystemIOAndReviewOfCSharp
             int most = mostArray[0];
 
             return most;
+        }
+
+        static void Challenge5Caller()
+        {
+            int[] exampleArray = new int[] { 5, 25, 99, 123, 78, 96, 555, 108, 4 };
+            int testFindMaximumValue = FindMaximumValue(exampleArray);
+            Console.WriteLine("Example: input [5, 25, 99, 123, 78, 96, 555, 108, 4]");
+            Console.WriteLine($"return: {testFindMaximumValue}");
+        }
+
+        public static int FindMaximumValue(int[] inputArray)
+        {
+            int comparingItem = inputArray[0];
+
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                if (inputArray[i] > comparingItem)
+                    comparingItem = inputArray[i];
+            }
+            return comparingItem;
+        }
+
+        static void Challenge6Caller()
+        {
+            string path = "../../../words.txt";
+
+            //ReadFile(path);
+            WriteTextToFile(path);
+        }
+
+        static void WriteTextToFile(string path)
+        {
+            string myInfo = "The bob was a spaceship";
+            File.WriteAllText(path, myInfo);
         }
     }
 }
