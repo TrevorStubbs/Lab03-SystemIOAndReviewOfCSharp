@@ -325,8 +325,15 @@ namespace Lab03SystemIOAndReviewOfCSharp
 
         public static string[] WordLengthGetter(string sentance)
         {
-            string[] outputInfo = new string[] { "the", "Brown", "Fox" };            
-            return outputInfo;
+            string[] splitString = sentance.Split(" ");
+
+            for (int i = 0; i < splitString.Length; i++)
+            {
+                int wordLength = splitString[i].Length;
+                splitString[i] = $"{splitString[i].ToLower()}: {wordLength}";
+            }
+          
+            return splitString;
         }
     }
 }
