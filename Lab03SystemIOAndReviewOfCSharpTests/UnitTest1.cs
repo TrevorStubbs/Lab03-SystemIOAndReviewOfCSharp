@@ -4,7 +4,7 @@ using static Lab03SystemIOAndReviewOfCSharp.Program;
 
 namespace Lab03SystemIOAndReviewOfCSharpTests
 {
-    public class UnitTest1
+    public class UnitTestsForChallenge1
     {
         [Fact]
         public void CanReturnZeroWhenLengthIsLessThanThree()
@@ -41,8 +41,35 @@ namespace Lab03SystemIOAndReviewOfCSharpTests
             int outputFromMethod = MultiplyInputNumber(numbers);
             // Assert
             Assert.Equal(product, outputFromMethod);
+        }       
+
+    }
+
+    public class UnitTestsForChallenge2
+    {
+        [Fact]
+        public void CanReturnTheAverage()
+        {
+            // Arrange
+            int[] testArray = { 1, 2, 3, 4 };
+            // Act
+            decimal calledMethod = GetAverage(testArray);
+            // Assert
+            Assert.Equal(2.5m, calledMethod);
         }
-        
-        
+
+        [Theory]
+        [InlineData(new int[] {5, 6, 9, 2}, 5.5)]
+        [InlineData(new int[] { 18, 11, 1 }, 10)]
+        [InlineData(new int[] { 9, 24, 33, 91, 7 }, 32.8)]
+        [InlineData(new int[] { 0, 0, 0, 0 }, 0)]
+        public void CanReturnValidAverages(int[] numbers, decimal expectedAverage)
+        {
+            //Arrange & Act
+            decimal outputFromMethod = GetAverage(numbers);
+            //Assert
+            Assert.Equal(expectedAverage, outputFromMethod);
+        }
+
     }
 }
