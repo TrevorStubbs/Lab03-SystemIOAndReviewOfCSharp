@@ -12,7 +12,8 @@ namespace Lab03SystemIOAndReviewOfCSharp
         {
             //Challenge1Caller();
             //Challenge2Caller();
-            Challenge3Caller();
+            //Challenge3Caller();
+            Challenge4Caller();
         }
 
         /// <summary>
@@ -175,5 +176,38 @@ namespace Lab03SystemIOAndReviewOfCSharp
                 Console.WriteLine();
             }
         }      
+
+        public static void Challenge4Caller()
+        {
+
+            int[] exampleArray = new int[] { 1, 1, 2, 2, 3, 3, 3, 1, 1, 5, 5, 6, 7, 8, 2, 1, 1 };
+            int testDuplicateMethod = MostDuplicates(exampleArray);
+            Console.WriteLine("Example: Input: [1,1,2,2,3,3,3,1,1,5,5,6,7,8,2,1,1]");
+            Console.WriteLine($"output: {testDuplicateMethod}");
+        }
+
+        public static int MostDuplicates(int[] inputArray)
+        {
+            int[] mostArray = new int[2] {inputArray[0] , 0};
+
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                int counter = 0;
+                for (int j = 0; j < inputArray.Length; j++)
+                {
+                    if (inputArray[i] == inputArray[j])
+                        counter++;
+                }
+                if(counter > mostArray[1])
+                {
+                    mostArray[0] = inputArray[i];
+                    mostArray[1] = counter;
+                }
+            }
+            
+            int most = mostArray[0];
+
+            return most;
+        }
     }
 }

@@ -72,4 +72,32 @@ namespace Lab03SystemIOAndReviewOfCSharpTests
         }
 
     }
+
+    public class UnitTestsForChallenge4
+    {
+        [Fact]
+        public void CanReturnExample()
+        {
+            // Arrange
+            int[] testArray = new int[] { 1, 1, 2, 2, 3, 3, 3, 1, 1, 5, 5, 6, 7, 8, 2, 1, 1 };
+            // Act
+            int methodOutput = MostDuplicates(testArray);
+            // Assert
+            Assert.Equal(1, methodOutput);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 5, 5, 5, 4, 4, 1 }, 5)]
+        [InlineData(new int[] { 1, 1, 1, 1, 1 }, 1)]
+        [InlineData(new int[] { 3, 3, 2, 2 }, 3)]
+        [InlineData(new int[] { 1, 2, 3, 4 }, 1)]
+        public void CanReturnExpectedResults(int[] inputArray, int expectedOutput)
+        {
+            //Arrange
+            //Act
+            int methodCall = MostDuplicates(inputArray);
+            //Assert
+            Assert.Equal(expectedOutput, methodCall);
+        }
+    }
 }
