@@ -36,10 +36,13 @@ Then select and open ```Lab03SystemIOAndReviewOfCSharp.sln```
 ![Middle](images/Lab03Mid.png)
 #### Application End
 ![Finished](images/Lab03Fin.png)
+#### WhiteBoard of Challenge 5
+![Whiteboard](images/Challenge5Whiteboard.png)
 
 ---
 
 ### Change Log
+- 1.6 Challenge 5 Complete
 - 1.5: Challenge 4 MostDuplicats Method Complete
 - 1.4: Challenge 3 MakeStar method Complete
 - 1.3: Challenge 2 GetAverage Method finished

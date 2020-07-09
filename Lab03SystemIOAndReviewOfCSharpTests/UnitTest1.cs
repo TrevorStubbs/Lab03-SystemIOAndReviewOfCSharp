@@ -100,4 +100,30 @@ namespace Lab03SystemIOAndReviewOfCSharpTests
             Assert.Equal(expectedOutput, methodCall);
         }
     }
+
+    public class UnitTestsForChallenge5
+    {
+        [Fact]
+        public void ProvidedExampleWorks()
+        {
+            //Arrange
+            int[] inputArray = new int[] { 5, 25, 99, 123, 78, 96, 555, 108, 4 };
+            //Act
+            int outputFromMethod = FindMaximumValue(inputArray);
+            //Assert
+            Assert.Equal(555, outputFromMethod);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 1, -1, 55, -33, -100 }, 55)]
+        [InlineData(new int[] { 5, 5, 5, 5 }, 5)]
+        public void AllRequiredTests(int[] inputArray, int expectedOutcome)
+        {
+            // Arrange
+            // Act
+            int methodCall = FindMaximumValue(inputArray);
+            // Assert
+            Assert.Equal(expectedOutcome, methodCall);
+        }
+    }
 }
