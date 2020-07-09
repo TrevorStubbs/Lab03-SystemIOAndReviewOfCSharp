@@ -42,6 +42,8 @@ Then select and open ```Lab03SystemIOAndReviewOfCSharp.sln```
 ---
 
 ### Change Log
+- 2.0: Challenge 9
+- 1.9: Challenge 8 Complete
 - 1.8: Challenge 7 Complete
 - 1.7: Challenge 6 Complete
 - 1.6: Challenge 5 Complete
