@@ -11,7 +11,8 @@ namespace Lab03SystemIOAndReviewOfCSharp
         static void Main(string[] args)
         {
             //Challenge1Caller();
-            Challenge2Caller();
+            //Challenge2Caller();
+            Challenge3Caller();
         }
 
         /// <summary>
@@ -136,6 +137,43 @@ namespace Lab03SystemIOAndReviewOfCSharp
             return average;
         }
 
+        static void Challenge3Caller()
+        {
+            MakeStar();
+        }
 
+        public static void MakeStar()
+        {
+            int rows = 5;
+            int blank = rows - 1;
+
+            for (int i = 1; i <= rows; i++)
+            {
+                for(int j = 1; j <= blank; j++)
+                {
+                    Console.Write(" ");
+                }
+                blank--;
+                for(int j = 1; j <= 2 * i - 1;j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            blank = 1;
+            for(int i = 1; i <= rows - 1; i++)
+            {
+                for (int k = 1; k <= blank; k++)
+                {
+                    Console.Write(" ");
+                }
+                blank++;
+                for(int k = 1; k <= 2 * (rows - i) - 1; k++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+        }      
     }
 }
